@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITC505 Lab 3: Custom Font Delivery</title>
+    <style>
+      @font-face {
+        font-family: "Lobster";
+        src: url("fonts/Lobster-Regular.ttf") format("truetype");
+      }
+      body {
+        font-family: "Lobster", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header,
+      footer {
+        background-color: #f8f8f8;
+        padding: 10px 20px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+      }
+      header {
+        border-top: 1px solid #ddd;
+      }
+      .content {
+        padding: 20px;
+        flex: 1;
+      }
+      ol {
+        padding-left: 20px;
+      }
+      footer {
+        border-top: 1px solid #ddd;
+        border-bottom: none;
+        background-color: #f8f8f8;
+        padding: 10px 0px;
+        text-align: center;
+        width: 100%;
+        margin-top: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>ITC505 Lab 3: Custom Font Delivery</h1>
+    </header>
+    <div class="content">
+      <h2>Delivering a Custom Font to a Client</h2>
+
+      <h2>Font Analysis: Lobster</h2>
+      <p>
+        The "Lobster" font is known for its distinctive, playful, and somewhat
+        vintage look. Here are some characteristics and analysis of this font:
+      </p>
+      <ul>
+        <li>
+          <strong>Design Style:</strong> Lobster has a bold, cursive style with
+          elaborate letterforms that convey a sense of fun and elegance. Its
+          thick strokes and rounded edges give it a friendly and approachable
+          feel.
+        </li>
+        <li>
+          <strong>Usage:</strong> Due to its unique style, Lobster is often used
+          in branding, logos, posters, and titles where a distinctive and
+          eye-catching font is desired. It is particularly popular in retro and
+          vintage designs.
+        </li>
+        <li>
+          <strong>Legibility:</strong> While Lobster is readable, its decorative
+          nature can make it harder to read in long passages of text. It is best
+          used for headings, short phrases, or decorative purposes.
+        </li>
+        <li>
+          <strong>Popularity:</strong> Lobster has become quite popular in web
+          design and graphic design due to its distinctive look and versatility
+          in creating engaging and memorable designs.
+        </li>
+      </ul>
+      <p>
+        Overall, Lobster is a font with a strong visual identity that can be
+        highly effective when used appropriately. Designers should be mindful of
+        its potential to dominate the visual hierarchy and ensure it is used in
+        contexts where its style enhances the overall design.
+      </p>
+
+      
+      <p>
+        This page demonstrates how to deliver a custom font to a client's
+        browser using the CSS <code>@font-face</code> rule. The steps involved
+        are as follows:
+      </p>
+      <ol>
+        <li>
+          <strong>Choose a Font:</strong> Choose a font-style and select a font
+          file (e.g., .ttf, .woff, .woff2). For this example, we chose the
+          "Lobster" font.
+        </li>
+        <li>
+          <strong>Host the Font File:</strong> Upload the font file to your
+          server. In this case, the font file is hosted at
+          <code>/fonts/Lobster-Regular.ttf</code> on the server. (in /lab-3
+          directory)
+        </li>
+        <li>
+          <strong>CSS <code>@font-face</code> Rule:</strong> Define the font in
+          your CSS using the <code>@font-face</code> rule, specifying the path
+          to the font file on your server. Here is the CSS rule used:
+          <pre>
+<code>
+@font-face {
+    font-family: 'Lobster';
+    src: url('fonts/Lobster-Regular.ttf') format('truetype');
+}
+body {
+    font-family: 'Lobster', sans-serif;
+}
+</code>
+                </pre>
+        </li>
+        <li>
+          <strong>Apply the Font:</strong> Use the defined font family in your
+          CSS styles to apply it to elements on your webpage. For this example,
+          the <code>body</code> element is styled with the "Lobster" font:
+          <pre>
+<code>
+body {
+    font-family: 'Lobster', sans-serif;
+}
+</code>
+                </pre>
+        </li>
+      </ol>
+      <p>
+        The result is this page, which uses the "Lobster" font for its text.
+        This method ensures that even if the font is not installed on the
+        client's computer, it will still be displayed correctly.
+      </p>
+
+      
+    </div>
+    <footer>
+      <p>
+        Last updated:
+        <span id="lastModified"></span>
+      </p>
+    </footer>
+    <script type="text/javascript">
+      var x = document.lastModified;
+      document.getElementById("lastModified").textContent = x;
+    </script>
+  </body>
+</html>
