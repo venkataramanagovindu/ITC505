@@ -4,25 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venkata Govindu Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            text-align: center;
-        }
-        h1 {
-            margin-bottom: 0;
-        }
-        p.contact {
-            margin-top: 0;
-        }
-        hr {
-            border: 0;
-            border-top: 1px solid #ccc;
-            margin: 20px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -38,7 +20,7 @@
     <hr>
 
     <section>
-        <h2>PROFESSIONAL SUMMARY</h2>
+        <h2>Professional Summary</h2>
         <ul>
             <li>Net Full Stack Developer with 5+ years of experience in architecting, designing, developing and deploying robust applications</li>
             <li>Extensive proficiency in crafting, developing, monitoring, and deploying cloud solutions on the AWS platform</li>
@@ -51,7 +33,7 @@
     <hr>
 
     <section>
-        <h2>EDUCATION</h2>
+        <h2>Education</h2>
         <p>Northern Arizona University, Flagstaff, AZ (Expected December 2025)</p>
         <ul>
             <li>Master’s, Computer Science</li>
@@ -65,7 +47,7 @@
     <hr>
 
     <section>
-        <h2>TECHNICAL SKILLS</h2>
+        <h2>Technical Skills</h2>
         <ul>
             <li>.NET Technologies: .NET Core, Entity Framework, ADO.NET, ASP NET MVC, Xamarin, XUnit, SeriLog, NLog, Log4Net</li>
             <li>Programming Languages: C#, C++, C, Node JS</li>
@@ -79,7 +61,7 @@
     <hr>
 
     <section>
-        <h2>CERTIFICATIONS</h2>
+        <h2>Certifications</h2>
         <ul>
             <li>AWS Certified Developer Associate</li>
             <li>Foundational C# with Microsoft</li>
@@ -89,7 +71,7 @@
     <hr>
 
     <section>
-        <h2>PROFESSIONAL EXPERIENCE</h2>
+        <h2>Professional Experience</h2>
         
         <h3>Innova Solutions, Hyderabad, India</h3>
         <h4>Optum, Senior .NET Full Stack Developer (October 2023 – Dec 2023)</h4>
@@ -135,12 +117,23 @@
 </article>
 
 <article>
-    <h2>Addendum</h2>
-    <p>This addendum explains the reasoning behind the choices made in the HTML representation of the resume.</p>
-    <p>Each section of the resume was wrapped in <code>&lt;section&gt;</code> tags to logically separate the different parts of the document. The <code>&lt;header&gt;</code> tag was used to group the contact information at the top of the document.</p>
-    <p>Within each section, <code>&lt;h2&gt;</code> tags were used for main headings, <code>&lt;h3&gt;</code> for company names, and <code>&lt;h4&gt;</code> for job titles and dates. Bullet points were wrapped in <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> tags to clearly list the various achievements and responsibilities.</p>
-    <p>The contact information includes links (<code>&lt;a&gt;</code> tags) for email and profiles on LinkedIn, GitHub, and Microsoft to make them clickable and easily accessible.</p>
+    <section id="addendum">
+        <h2>Addendum</h2>
+        <p>This addendum explains the reasoning behind the choices made in the HTML representation of the resume and the CSS styling applied to it.</p>
+
+        <h3>Stylistic Choices</h3>
+        <p><strong>Font Choices:</strong> The primary font used is Arial, a clean and widely available sans-serif font, ensuring readability and professionalism.</p>
+        <p><strong>Heading Sizes:</strong> The main heading (h1) is set to 2.5em to create a strong emphasis on the name. Section headings (h2) are set to 2em with a blue color and a bottom border to differentiate sections. Subheadings (h3 and h4) are progressively smaller to create a clear hierarchy.</p>
+        <p><strong>Color Choices:</strong> Blue shades (#0073e6 and #005bb5) are used for headings and links to create a cohesive and professional look. The main text color is dark gray (#333) for readability against the light gray background (#f4f4f9).</p>
+        <p><strong>Margins and Padding:</strong> Consistent margins and padding are applied throughout to ensure proper spacing between elements. Sections are spaced out with margins to prevent clutter and improve readability.</p>
+
+        
+        <h3>HTML abuse</h3>
+        <p>No instances of HTML abuse were found. The HTML structure uses appropriate semantic tags to ensure that the document is both logically structured and accessible.</p>
+
+    </section>
 </article>
+
 
 <footer>
     <p>Last updated: <span id="lastModified"></span></p>

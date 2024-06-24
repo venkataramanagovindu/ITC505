@@ -1,0 +1,77 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Background color to make the stars more visible */
+}
+
+#galaxy {
+    width: 100%;
+    height: 100%;
+}
+
+#sun {
+    fill: yellow;
+}
+
+#earthAndMoon {
+    animation: orbitEarth 10s infinite linear;
+}
+
+#earth {
+    fill: blue;
+}
+
+#moon {
+    fill: gray;
+    animation: orbitMoon 2s infinite linear;
+}
+
+#moonText{
+    animation: orbitMoon 2s infinite linear;
+    font-size: 5px;
+}
+
+@keyframes orbitEarth {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: 200px 200px;
+    }
+    100% {
+        transform: rotate(360deg);
+        transform-origin: 200px 200px;
+    }
+}
+
+@keyframes orbitMoon {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: 300px 200px;
+    }
+    100% {
+        transform: rotate(360deg);
+        transform-origin: 300px 200px;
+    }
+}
+
+.star {
+    fill: white;
+    stroke: none;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
