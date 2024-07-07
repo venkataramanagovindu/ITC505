@@ -11,13 +11,26 @@ body {
 
 /* Navigation bar styling */
 .navbar {
-    background-color: #42a45e; /* Changed to a food-related color */
-    padding: 15px 0;
+    background-color: #42a45e;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Ensures it's above other content */
-    transition: top 0.3s; /* Add smooth transition effect */
+    z-index: 1000;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 .navbar ul {
@@ -26,6 +39,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: space-around;
+    padding-right: 10px;
 }
 
 .navbar ul li {
@@ -40,15 +54,16 @@ body {
 }
 
 .navbar ul li a:hover {
-    background-color: #42a45e; /* Changed to a food-related color */
+    background-color: #4CAF50; /* Changed to a food-related hover color */
     border-radius: 5px;
 }
 
 /* Main content styling */
 .content {
-    padding: 60px 20px 20px; /* Adjust top padding to accommodate the fixed header and provide scroll padding */
+    padding-top: 106px; /* Adjust top padding to accommodate the fixed header */
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 75px;
 }
 
 /* Section styling */
@@ -71,6 +86,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 20px; /* Add gap between grid items */
     margin-bottom: 20px; /* Add margin at the bottom of each grid container */
+    position: relative; /* Relative positioning for grid container */
 }
 
 .grid-image img {
@@ -94,9 +110,9 @@ body {
 
 .product-item .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-bottom: 20px; /* Add margin at the bottom of each product grid container */
+    position: relative; /* Relative positioning for product grid container */
 }
 
 /* Footer styling */
@@ -116,23 +132,52 @@ footer {
 }
 
 /* Media queries for responsive design */
-@media (max-width: 599px) {
-    .navbar ul {
-        flex-direction: column;
-        text-align: center;
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show the menu icon for mobile */
     }
 
-    .grid-container {
-        grid-template-columns: 1fr;
+    .navbar .logo {
+        flex: none; /* Reset logo flex */
+        width: 100px; /* Adjust logo width */
+    }
+
+    .navbar-links {
+        display: none; /* Hide navbar links by default */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust top position to accommodate navbar */
+        left: 0;
+        background-color: #42a45e; /* Match navbar background */
+        padding: 20px;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1); /* Add shadow for dropdown effect */
+        z-index: 999; /* Ensure dropdown is above other content */
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show navbar links when active */
+    }
+
+    .navbar-links li {
+        margin: 10px 0; /* Adjust margin for mobile */
+    }
+
+    .navbar-links li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
     }
 
     .product-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column layout for products on mobile */
     }
-}
 
-@media (min-width: 600px) {
-    .navbar ul {
-        flex-direction: row;
+    .product-item .grid-container {
+        grid-template-columns: 1fr; /* Adjust grid container columns for mobile */
+    }
+
+    .tab-content {
+        padding: 10px; /* Adjust padding for tab content on mobile */
     }
 }
