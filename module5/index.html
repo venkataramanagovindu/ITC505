@@ -3,61 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Website</title>
+    <title>Delicious Bites</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#home" onclick="showTab(event, 'home')">Home</a></li>
+                <li><a href="#about" onclick="showTab(event, 'about')">About Us</a></li>
+                <li><a href="#products" onclick="showTab(event, 'products')">Menu</a></li>
+                <li><a href="#contact" onclick="showTab(event, 'contact')">Contact Us</a></li>
             </ul>
         </nav>
     </header>
     <main class="content">
-        <section id="home">
-            <h1>Welcome to Our Website</h1>
-            <p>We create stunning websites and provide excellent services. Let us help you grow your business online.</p>
-            <img src="images/home.jpg" alt="Home Image">
-        </section>
-        <section id="about">
-            <h1>About Us</h1>
-            <p>We are a team of passionate web developers and designers dedicated to delivering the best user experiences.</p>
-            <img src="images/about.jpg" alt="Home Image">
-
-        </section>
-        <section id="services">
-            <h1>Our Services</h1>
-            <p>We offer a wide range of services including web development, graphic design, SEO, and more.</p>
-            <img src="images/services.jpg" alt="Home Image">
-
-        </section>
-        <section id="portfolio">
-            <h1>Our Portfolio</h1>
-            <p>Check out some of our recent projects that showcase our skills and expertise.</p>
-            <img src="images/portfolio.jpg" alt="Home Image">
-
-        </section>
-        <section id="contact">
-            <h1>Contact Us</h1>
-            <p>We would love to hear from you. Get in touch with us to discuss your next project.</p>
-            <img src="images/contactus.jpg" alt="Home Image">
-
-        </section>
-        <section class="relative-container">
-            <div class="relative-content">
-                <h2>Our Vision</h2>
-                <p>We strive to create the best digital experiences for our clients and help them succeed in their respective industries.</p>
+        <section id="home" class="tab-content">
+            <div class="grid-container">
+                <div class="grid-image">
+                    <img src="images/home_food1.jpg" alt="Delicious Food 1">
+                </div>
+                <div class="grid-content">
+                    <h1>Welcome to Delicious Bites</h1>
+                    <p>Experience the best gourmet food delivered to your doorstep. Fresh, healthy, and absolutely delicious.</p>
+                </div>
             </div>
-            <div class="absolute-layer">
-                <h2>Our Mission</h2>
-                <p>Delivering high-quality web solutions that drive business success and enhance customer engagement.</p>
+            <div class="grid-container">
+                <div class="grid-image">
+                    <img src="images/home_food2.jpg" alt="Delicious Food 2">
+                </div>
+                <div class="grid-content">
+                    <h1>Our Special Dishes</h1>
+                    <p>Indulge in our specially curated dishes made from the freshest ingredients.</p>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="tab-content" style="display:none;">
+            <div class="grid-container">
+                <div class="grid-image">
+                    <img src="images/about_food1.jpg" alt="About Us Image 1">
+                </div>
+                <div class="grid-content">
+                    <h1>About Us</h1>
+                    <p>At Delicious Bites, we are passionate about food. Our mission is to bring you the best culinary experiences from around the world.</p>
+                </div>
+            </div>
+            <div class="grid-container">
+                <div class="grid-image">
+                    <img src="images/about_food2.jpg" alt="About Us Image 2">
+                </div>
+                <div class="grid-content">
+                    <h1>Our Journey</h1>
+                    <p>We started as a small family restaurant and have grown into a beloved food brand, cherished by food lovers everywhere.</p>
+                </div>
+            </div>
+        </section>
+        <section id="products" class="tab-content" style="display:none;">
+            <h1>Our Menu</h1>
+            <div class="product-grid">
+                <div class="product-item">
+                    <div class="grid-container">
+                        <div class="grid-image">
+                            <img src="images/dish1.jpg" alt="Dish 1">
+                        </div>
+                        <div class="grid-content">
+                            <h2>Grilled Chicken Salad</h2>
+                            <p>Fresh greens with perfectly grilled chicken, topped with a light vinaigrette.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grid-container">
+                        <div class="grid-image">
+                            <img src="images/dish2.jpg" alt="Dish 2">
+                        </div>
+                        <div class="grid-content">
+                            <h2>Spaghetti Carbonara</h2>
+                            <p>Classic Italian pasta with a creamy sauce, pancetta, and Parmesan cheese.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grid-container">
+                        <div class="grid-image">
+                            <img src="images/dish3.jpg" alt="Dish 3">
+                        </div>
+                        <div class="grid-content">
+                            <h2>Margherita Pizza</h2>
+                            <p>Wood-fired pizza with fresh tomatoes, mozzarella, and basil.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grid-container">
+                        <div class="grid-image">
+                            <img src="images/dish4.jpg" alt="Dish 4">
+                        </div>
+                        <div class="grid-content">
+                            <h2>Beef Tacos</h2>
+                            <p>Soft tortillas filled with seasoned beef, fresh salsa, and guacamole.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grid-container">
+                        <div class="grid-image">
+                            <img src="images/dish5.jpg" alt="Dish 5">
+                        </div>
+                        <div class="grid-content">
+                            <h2>Sushi Platter</h2>
+                            <p>A variety of fresh sushi, including sashimi, nigiri, and rolls.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grid-container">
+                        <div class="grid-image">
+                            <img src="images/dish6.jpg" alt="Dish 6">
+                        </div>
+                        <div class="grid-content">
+                            <h2>Vegetarian Burger</h2>
+                            <p>A delicious plant-based burger with all the classic toppings.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grid-container">
+                        <div class="grid-image">
+                            <img src="images/dish7.jpg" alt="Dish 7">
+                        </div>
+                        <div class="grid-content">
+                            <h2>Chocolate Lava Cake</h2>
+                            <p>A rich and decadent chocolate cake with a molten center.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grid-container">
+                        <div class="grid-image">
+                            <img src="images/dish8.jpg" alt="Dish 8">
+                        </div>
+                        <div class="grid-content">
+                            <h2>Fruit Parfait</h2>
+                            <p>Layers of fresh fruit, yogurt, and granola.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="tab-content" style="display:none;">
+            <div class="grid-container">
+                <div class="grid-image">
+                    <img src="images/contact_food1.jpg" alt="Contact Us Image 1">
+                </div>
+                <div class="grid-content">
+                    <h1>Contact Us</h1>
+                    <p>Have questions or feedback? We'd love to hear from you. Reach out to us through our contact form or call us at (123) 456-7890.</p>
+                </div>
+            </div>
+            <div class="grid-container">
+                <div class="grid-image">
+                    <img src="images/contact_food2.jpg" alt="Contact Us Image 2">
+                </div>
+                <div class="grid-content">
+                    <h1>Customer Support</h1>
+                    <p>Our dedicated customer support team is here to assist you with any inquiries or issues you may have.</p>
+                </div>
             </div>
         </section>
     </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Delicious Bites. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function showTab(event, tabId) {
+            event.preventDefault();
+            var tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById(tabId).style.display = 'block';
+        }
+
+        // Automatically show the home tab on initial load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('home').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
