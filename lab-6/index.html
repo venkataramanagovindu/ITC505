@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Rock-Paper-Scissors</h1>
+        </header>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <h2 class="textCenter">Rock-Paper-Scissors Game</h2>
+            <div class="game">
+                <button class="choice" data-choice="rock">Rock</button>
+                <button class="choice" data-choice="paper">Paper</button>
+                <button class="choice" data-choice="scissors">Scissors</button>
+            </div>
+            <p class="textCenter" id="result"></p>
+        </main>
+        <aside class="advertisement">
+            <p class="ad-label">Advertisement</p>
+            <a href="https://www.amazon.com/gp/product/B0D1XD1ZV3/ref=s9_bw_cg_APBX9_1a1_w?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-5&pf_rd_r=GE955MJRYJ9HD4YS9XRW&pf_rd_t=101&pf_rd_p=42d0ba81-7fa4-4032-9d29-ef87c3628305&pf_rd_i=172282" target="_blank">
+                <img src="https://m.media-amazon.com/images/I/61sRKTAfrhL._AC_SL1500_.jpg" alt="airpods">
+            </a>
+
+            <a href="https://www.amazon.com/gp/product/B0D1XD1ZV3/ref=s9_bw_cg_APBX9_1a1_w?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-5&pf_rd_r=GE955MJRYJ9HD4YS9XRW&pf_rd_t=101&pf_rd_p=42d0ba81-7fa4-4032-9d29-ef87c3628305&pf_rd_i=172282" target="_blank">
+                <img src="https://m.media-amazon.com/images/I/51+vJkbGtJL._AC_SL1500_.jpg" alt="airpods">
+            </a>
+
+            
+        </aside>
+        <footer class="footer">
+            <p>Last updated: <span id="lastModified"></span></p>
+            <p>Addendum: I created a Rock-Paper-Scissors game where users can play against the computer. The main challenge was implementing the game logic and ensuring the buttons triggered the appropriate responses.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
