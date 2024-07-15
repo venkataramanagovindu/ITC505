@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Photography Blog</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <article>
+                <h2>Exploring the Wonders of Nature Through Photography</h2>
+                <p>Join me on a visual journey through lush forests, majestic mountains, and serene lakes. Experience the beauty of nature captured in moments of stillness and motion, revealing the harmony and diversity of our natural world.</p>                
+                <section class="comments">
+                    <h3>Comments <span id="comment-count">0</span></h3>
+                    <ul id="comment-list">
+                    </ul>
+                    <form id="comment-form">
+                        <input type="text" id="username" placeholder="Your Name" required>
+                        <textarea id="comment" placeholder="Your Comment" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
+            </article>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Personal Blog</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
