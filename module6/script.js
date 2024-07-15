@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const commentForm = document.getElementById('comment-form');
     const commentList = document.getElementById('comment-list');
-    const commentCount = document.getElementById('comment-count');
+    const commentCount = document.querySelector('.comment-count');
+
+    let commentId = 1;
 
     commentForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -20,17 +22,18 @@ document.addEventListener('DOMContentLoaded', function() {
         newComment.innerHTML = `
             <strong>${usernameInput.value}</strong>: 
             <p>${commentInput.value}</p>
-            <div>
-                <button class="like-btn">Like</button>
-                <span class="like-count">0</span>
-            </div>
+            <button class="like-btn">Like</button>
+            <span class="like-count">0</span>
         `;
+        newComment.classList.add('comment-item');
+        newComment.dataset.id = commentId;
+        commentId++;
 
         // Append new comment to comment list
         commentList.appendChild(newComment);
 
         // Update comment count
-        commentCount.textContent = parseInt(commentCount.textContent) + 1;
+        updateCommentCount();
 
         // Clear form inputs
         usernameInput.value = '';
@@ -46,4 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
             likeCount.textContent = count;
         });
     });
+
+    function updateCommentCount() {
+        const commentCountElem = document.querySelectorAll('.comment-item').length;
+        commentCount.textContent = commentCountElem;
+    }
 });

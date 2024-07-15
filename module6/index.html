@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Blog</title>
+    <title>Exploring Nature Through Photography</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Photography Blog</h1>
+        <h1>My Photography Blog</h1>
     </header>
     <div class="container">
         <aside class="sidebar">
@@ -22,23 +22,29 @@
         </aside>
         <main>
             <article>
-                <h2>Exploring the Wonders of Nature Through Photography</h2>
-                <p>Join me on a visual journey through lush forests, majestic mountains, and serene lakes. Experience the beauty of nature captured in moments of stillness and motion, revealing the harmony and diversity of our natural world.</p>                
-                <section class="comments">
-                    <h3>Comments <span id="comment-count">0</span></h3>
-                    <ul id="comment-list">
-                    </ul>
-                    <form id="comment-form">
-                        <input type="text" id="username" placeholder="Your Name" required>
-                        <textarea id="comment" placeholder="Your Comment" required></textarea>
-                        <button type="submit">Submit</button>
-                    </form>
-                </section>
+                <div class="post-grid">
+                    <div class="post-content">
+                        <h2>Exploring the Wonders of Nature Through Photography</h2>
+                        <p>Join me on a visual journey through lush forests, majestic mountains, and serene lakes. Experience the beauty of nature captured in moments of stillness and motion, revealing the harmony and diversity of our natural world.</p>
+                        <section class="comments">
+                            <form id="comment-form">
+                                <input type="text" id="username" placeholder="Your Name" required>
+                                <textarea id="comment" placeholder="Your Comment" required></textarea>
+                                <button type="submit">Submit</button>
+                            </form>
+                            <h3>Comments <span class="comment-count">0</span></h3>
+                            <ul id="comment-list"></ul>
+                        </section>
+                    </div>
+                    <div class="post-image">
+                        <img src="https://img.freepik.com/free-photo/beautiful-shot-crystal-clear-lake-snowy-mountain-base-sunny-day_181624-5459.jpg?t=st=1721003392~exp=1721006992~hmac=ebc440a147c64ed6f4ea35665b1736e5927868cebd6bf3b3e6344498b131c3fb&w=1800" alt="Nature Photo">
+                    </div>
+                </div>
             </article>
         </main>
     </div>
     <footer>
-        <p>&copy; 2024 My Personal Blog</p>
+        <p>&copy; 2024 My Photography Blog</p>
     </footer>
     <script src="script.js"></script>
 </body>
