@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const commentInput = document.getElementById('comment');
 
         // Form validation
-        if (usernameInput.value.trim().length < 3 || commentInput.value.trim().length < 3) {
-            alert('Please enter at least 3 characters for both Name and Comment.');
+        if (usernameInput.value.trim().length < 2 || commentInput.value.trim().length < 2) {
+            alert('Please enter at least 2 characters for both Name and Comment.');
             return;
         }
 
