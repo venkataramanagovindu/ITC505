@@ -11,14 +11,25 @@
         <h1>Choose Your Own Adventure</h1>
     </header>
     <main>
-        <div id="story"></div>
-        <div id="choices"></div>
-        <div id="image-container">
-            <img id="story-image" src="" alt="Story Image">
+        <div id="story-container">
+            <div id="story"></div>
+            <div id="choices"></div>
+            <div id="image-container">
+                <img id="story-image" src="" alt="Story Image" height="30px" >
+            </div>
+            <div id="buttons-container">
+                <button id="restart-button" onclick="startGame()">Restart</button>
+                <button id="back-button" onclick="goBack()">Back</button>
+            </div>
         </div>
-        <button id="restart-button" onclick="startGame()">Restart</button>
-        <button id="back-button" onclick="goBack()">Back</button>
     </main>
+    <section id="addendum">
+        <h2>Addendum</h2>
+        <p>Describe your process and creative choices along with any challenges faced and how you overcame them, including insights gained during this process.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Choose Your Own Adventure. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
