@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Your Own Adventure</title>
+    <title>Adventure Paths</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Choose Your Own Adventure</h1>
+        <h1>Adventure Paths</h1>
     </header>
     <main>
         <div id="story-container">
             <div id="story"></div>
             <div id="choices"></div>
             <div id="image-container">
-                <img id="story-image" src="" alt="Story Image" height="30px" >
+                <img id="story-image" src="" alt="Story Image">
             </div>
             <div id="buttons-container">
                 <button id="restart-button" onclick="startGame()">Restart</button>
@@ -25,9 +25,21 @@
     </main>
     <section id="addendum">
         <h2>Addendum</h2>
-        <p>Describe your process and creative choices along with any challenges faced and how you overcame them, including insights gained during this process.</p>
+        <p>
+            During the development of this Adventure Paths, I planned the storyline, structured each stage using JavaScript objects, and focused on creating a responsive layout with a lavender theme using CSS.
+            <br><br>
+            Challenges included ensuring all story paths were accessible and images loaded correctly based on user choices. Debugging and testing were crucial for smooth transitions and proper functionality.
+            <br><br>
+            Insights gained included improving my JavaScript skills in event handling and DOM manipulation, which are valuable for interactive storytelling projects.
+            <br><br>
+            Overall, developing this game was both challenging and rewarding, enhancing my understanding of front-end web development and storytelling techniques.
+        </p>
     </section>
     <footer>
+            <p>Last updated: 
+                <span id="lastModified"></span>
+            </p>
+             
         <p>&copy; 2024 Choose Your Own Adventure. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>

@@ -97,6 +97,9 @@ const storyStages = {
     }
 };
 
+var x = document.lastModified;
+document.getElementById('lastModified').textContent = x;
+
 let currentStage = 'start';
 let history = [];
 
