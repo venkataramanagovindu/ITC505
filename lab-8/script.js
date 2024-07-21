@@ -1,16 +1,10 @@
 function validateForm() {
-    const firstName = encodeHTML(document.getElementById("firstName").value);
-    const lastName = encodeHTML(document.getElementById("lastName").value);
-    const email = encodeHTML(document.getElementById("email").value);
-    const password = encodeHTML(document.getElementById("password").value);
-    const confirmPassword = encodeHTML(document.getElementById("confirmPassword").value);
-    
-    console.log(firstName);
-    console.log(lastName);
-    console.log(email);
-    console.log(password);
-    console.log(confirmPassword);
-    debugger;
+    const firstName = sanitizeInput(document.getElementById("firstName").value);
+    const lastName = sanitizeInput(document.getElementById("lastName").value);
+    const email = sanitizeInput(document.getElementById("email").value);
+    const password = sanitizeInput(document.getElementById("password").value);
+    const confirmPassword = sanitizeInput(document.getElementById("confirmPassword").value);
+
 
     if (!firstName || !lastName || !email || !password || !confirmPassword) {
         alert("All fields must be filled out");
@@ -31,9 +25,14 @@ function validateForm() {
     return true;
 }
 
+function sanitizeInput(str) {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML.replace(/['";=<>]/g, ''); // Remove characters that are typically used in SQL injection
+}
+
 function encodeHTML(str) {
-    let x =  str.replace(/[\u00A0-\u9999<>&]/gim, function(i) {
+    return str.replace(/[\u00A0-\u9999<>&]/gim, function(i) {
        return '&#' + i.charCodeAt(0) + ';';
     });
-    return x;
 }
