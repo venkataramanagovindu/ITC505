@@ -1,0 +1,92 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p.contact {
+    font-size: 1.1em;
+}
+
+header p.contact a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+header p.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Section and heading styling */
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #0073e6;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #005bb5;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: normal;
+    color: #333;
+}
+
+/* List styling */
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Horizontal rule styling */
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+}

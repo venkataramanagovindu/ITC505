@@ -18,4 +18,26 @@ let port = 80
 if (process.argv[2] === 'local') {
   port = 8080
 }
+
+
+// Route to handle form submission
+server.post('/ITC505/lab-7/submit', (req, res) => {
+  const { noun1, verb1, adjective1, noun2, place } = req.body;
+  if (!noun1 || !verb1 || !adjective1 || !noun2 || !place) {
+      res.send(`
+          <h1>Submission Failed</h1>
+          <p>Please fill out ALL fields</p>
+          <a href="/ITC505/lab-7/index.html">Go Back to Form</a>
+      `);
+      return;
+  }
+  const madLib = `Once upon a time, a ${adjective1} ${noun1} decided to ${verb1} with some ${noun2} at the ${place}.`;
+  res.send(`
+      <h1>Submission Successful</h1>
+      <p>${madLib}</p>
+      <a href="/ITC505/lab-7/index.html">Go Back to Form</a>
+  `);
+});
+
+
 server.listen(port, () => console.log('Ready on localhost!'))
