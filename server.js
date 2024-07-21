@@ -21,22 +21,22 @@ if (process.argv[2] === 'local') {
 
 
 // Route to handle form submission
-server.post('/ITC505/lab-7/submit', (req, res) => {
-  const { noun1, verb1, adjective1, noun2, place } = req.body;
-  if (!noun1 || !verb1 || !adjective1 || !noun2 || !place) {
-      res.send(`
-          <h1>Submission Failed</h1>
-          <p>Please fill out ALL fields</p>
-          <a href="/ITC505/lab-7/index.html">Go Back to Form</a>
-      `);
-      return;
-  }
-  const madLib = `Once upon a time, a ${adjective1} ${noun1} decided to ${verb1} with some ${noun2} at the ${place}.`;
-  res.send(`
-      <h1>Submission Successful</h1>
-      <p>${madLib}</p>
-      <a href="/ITC505/lab-7/index.html">Go Back to Form</a>
-  `);
+server.post('/ITC505/lab-7', (req, res) => {
+  const { adjective1, noun1, verb1, place, adjective2, noun2, adjective3, noun3, verb2 } = req.body;
+    if (!adjective1 || !noun1 || !verb1 || !place || !adjective2 || !noun2 || !adjective3 || !noun3 || !verb2) {
+        res.send(`
+            <h1>Submission Failed</h1>
+            <p>Please fill out ALL fields</p>
+            <a href="/ITC505/lab-7/index.html">Go Back to Form</a>
+        `);
+        return;
+    }
+    const madLib = `Once upon a time, a ${adjective1} ${noun1} decided to ${verb1} to the ${place}. Along the way, they encountered a ${adjective2} ${noun2} who offered them a ${adjective3} ${noun3}. Intrigued, the ${noun1} accepted the gift and continued on their journey. When they finally arrived at the ${place}, they used the ${noun3} to ${verb2} the local ${noun4}. The entire ${place} was amazed by the ${adjective4} feat, and they all celebrated by ${verb3} together.`;
+    res.send(`
+        <h1>Submission Successful</h1>
+        <p>${madLib}</p>
+        <a href="/ITC505/lab-7/index.html">Go Back to Form</a>
+    `);
 });
 
 
