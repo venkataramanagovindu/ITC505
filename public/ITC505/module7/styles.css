@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border: 1px solid #ddd;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#todo-list li:last-child {
+    border-bottom: none;
+}
+
+.highlight {
+    background-color: #dff0d8;
+}
+
+#status-codes {
+    list-style: none;
+    padding: 0;
+}
+
+#status-codes li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background: #f9f9f9;
+}
+
+#json-sections {
+    display: flex;
+    justify-content: space-between;
+}
+
+#json-sections > div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+#json-sections > div:last-child {
+    margin-right: 0;
+}
+
+pre {
+    background-color: #e8e8e8;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4CAF50;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
