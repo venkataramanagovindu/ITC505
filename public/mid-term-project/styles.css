@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lavender;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header, footer {
+    width: 100%;
+    background-color: #6A5ACD; /* SlateBlue */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+main {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    flex-grow: 1;
+}
+
+#story-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#story {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#choices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#choices button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+
+#image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#story-image {
+    max-width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#restart-button, #back-button {
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100px;
+}
+
+#addendum {
+    max-width: 1200px;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#addendum h2 {
+    text-align: center;
+    color: #6A5ACD; /* SlateBlue */
+}
+
+#addendum p {
+    text-align: justify;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #6A5ACD; /* SlateBlue */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Paths</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Adventure Paths</h1>
+    </header>
+    <main>
+        <div id="story-container">
+            <div id="story"></div>
+            <div id="choices"></div>
+            <div id="image-container">
+                <img id="story-image" src="" alt="Story Image">
+            </div>
+            <div id="buttons-container">
+                <button id="restart-button" onclick="startGame()">Restart</button>
+                <button id="back-button" onclick="goBack()">Back</button>
+            </div>
+        </div>
+    </main>
+    <section id="addendum">
+        <h2>Addendum</h2>
+        <p>
+            Adventure Paths began as a project merging storytelling with interactive web development, using HTML, CSS, and JavaScript to build a captivating game with a calming lavender theme. The process started with detailed storyline planning, structuring each stage using JavaScript objects to enable dynamic user-driven narratives.            
+            <br><br>
+            A significant challenge was ensuring seamless accessibility to multiple story paths. Each decision point required logical branching with relevant imagery for immersive storytelling. Rigorous debugging across devices and browsers ensured smooth functionality and transitions.
+            <br><br>
+            Overcoming these challenges enhanced my JavaScript skills in event handling and DOM manipulation, crucial for implementing interactive features like choice buttons and dynamic imagery. Iterative design and user feedback refined gameplay mechanics and narrative flow, fostering engaging player experiences.
+            <br><br>
+            Throughout this project, I honed my JavaScript proficiency, particularly in event handling and DOM manipulation. Implementing interactive elements like choice buttons and dynamic image updates required precise coding and attention to user experience details. Each iteration brought new insights into optimizing performance and enhancing interactivity.
+            </p>
+    </section>
+    <footer>
+            <p>Last updated: 
+                <span id="lastModified"></span>
+            </p>
+             
+        <p>&copy; 2024 Choose Your Own Adventure. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

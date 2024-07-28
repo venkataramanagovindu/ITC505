@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Surplus App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3c7c76;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #1f1c1c;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #fff;
+            margin: 0 10px;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #1f1c1c;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .hidden {
+            display: none;
+        }
+        .pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Food Surplus App</h1>
+</header>
+
+<nav>
+    <button class="pointer" onclick="showSection('home')">Home</button>
+    <button class="pointer" onclick="showSection('about')">About</button>
+    <button class="pointer" onclick="showSection('services')">Services</button>
+    <button class="pointer" onclick="showSection('contact')">Contact</button>
+</nav>
+
+<main>
+<section id="home">
+    <h2>Home</h2>
+    <p>Welcome to the Food Surplus App homepage. Our app connects food surplus with those in need, reducing waste and helping communities thrive.</p>
+    <p>With our platform, restaurants, cafes, and grocery stores can easily donate their excess food, while charities and individuals can access fresh and nutritious meals that would otherwise go to waste.</p>
+    <p>Join us in our mission to make a positive impact on the environment and support those facing food insecurity.</p>
+    <div>
+        <h3>Explore More:</h3>
+        <ul>
+            <li><a href="https://www.feedingamerica.org/">Feeding America</a> - Learn about food banks and hunger relief efforts in the United States.</li>
+            <li><a href="https://www.globalcitizen.org/en/content/food-waste-around-the-world/">Global Citizen</a> - Discover global initiatives combating food waste.</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Get Involved:</h3>
+        <p>Find out how you can contribute:</p>
+        <ul>
+            <li>Volunteer at local food banks</li>
+            <li>Donate to organizations fighting food insecurity</li>
+            <li>Spread awareness about food waste reduction</li>
+        </ul>
+    </div>
+    <button class="pointer" onclick="showSection('about')">Learn More</button>
+</section>
+
+
+    <section id="about" class="hidden">
+        <h2>About</h2>
+        <p>The Food Surplus App aims to tackle food waste by connecting surplus food from restaurants, cafes, and grocery stores with local charities and individuals in need. Our platform provides a simple and efficient solution to redistribute excess food and make a positive impact on both the environment and the community.</p>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1 1 300px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #fff;">
+                <h3>Our Mission</h3>
+                <p>Our mission is to reduce food waste and fight hunger by efficiently connecting food surplus with those in need. We aim to create a sustainable system that benefits both the environment and communities.</p>
+            </div>
+            
+            <div style="flex: 1 1 300px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #fff;">
+                <h3>How It Works</h3>
+                <p>Restaurants, cafes, and stores can easily list their surplus food on our platform. Charities and individuals in need can browse available listings and arrange pickups, ensuring no food goes to waste.</p>
+            </div>
+            
+            <div style="flex: 1 1 300px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #fff;">
+                <h3>Our Impact</h3>
+                <p>Since our launch, we've helped divert thousands of meals from landfills to those in need. Our network continues to grow, making a significant impact on reducing food waste and alleviating hunger.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services" class="hidden">
+        <h2>Services</h2>
+        <p>Our services include:</p>
+        <ul>
+            <li>Connecting food donors with charities and individuals</li>
+            <li>Facilitating food pickup and delivery</li>
+            <li>Tracking and reporting food donations</li>
+            <li>Providing resources and support for food surplus management</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="hidden">
+        <h2>Contact</h2>
+        <p>Have questions or feedback? Contact us:</p>
+        <ul>
+            <li>Email: info@foodsurplusapp.com</li>
+            <li>Phone: 123-456-7890</li>
+            <li>Address: 123 Main Street, City, Country</li>
+        </ul>
+
+            <form action="#" method="post" style="max-width: 400px; margin: auto;">
+                <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                
+                <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                
+                <label for="message" style="display: block; margin-bottom: 5px;">Message:</label>
+                <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"></textarea>
+                
+                <input type="submit" value="Submit" style="background-color: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            </form>
+        
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Food Surplus App</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.add('hidden');
+        });
+
+        // Show the selected section
+        const selectedSection = document.getElementById(sectionId);
+        selectedSection.classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>

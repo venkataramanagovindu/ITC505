@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <svg id="galaxy" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+        <!-- Sun -->
+        <circle cx="200" cy="200" r="30" id="sun" />
+        <text x="200" y="195" text-anchor="middle" fill="brown" font-size="10">Sun</text>
+        
+        <!-- Earth orbit -->
+        <circle cx="200" cy="200" r="100" id="earthOrbit" fill="none" stroke="#ccc" />
+
+        <!-- Earth and Moon group -->
+        <g id="earthAndMoon">
+            <!-- Earth -->
+            <circle cx="300" cy="200" r="15" id="earth" />
+            <text x="300" y="195" text-anchor="middle"
+            fill="burlywood" font-size="7px">Earth</text>
+
+            <!-- Moon orbit -->
+            <circle cx="300" cy="200" r="25" id="moonOrbit" fill="none" stroke="#ccc" />
+
+            <!-- Moon -->
+            <circle cx="325" cy="200" r="5" id="moon" />
+            <text x="325" y="195" text-anchor="middle" id="moonText" fill="aqua" font-size="8">Moon</text>
+        </g>
+
+                <!-- Stars -->
+                <circle cx="50" cy="50" r="3" class="star" />
+                <circle cx="80" cy="350" r="3" class="star" />
+                <circle cx="370" cy="370" r="3" class="star" />
+                <circle cx="200" cy="50" r="3" class="star" />
+                <circle cx="50" cy="350" r="3" class="star" />
+                <circle cx="350" cy="320" r="3" class="star" />
+                <circle cx="320" cy="50" r="3" class="star" />
+                <circle cx="150" cy="100" r="3" class="star" />
+                <circle cx="250" cy="370" r="3" class="star" />
+                <circle cx="100" cy="200" r="3" class="star" />
+                <circle cx="300" cy="250" r="3" class="star" />
+
+            <path d="M350 80 L353 87 L360 87 L355 92 L357 100 L350 95 L343 100 L345 92 L340 87 L347 87 Z" class="star" />
+      
+    </svg>
+</body>
+</html>
