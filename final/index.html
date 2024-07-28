@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Lights Out Game</h1>
+    <div id="game-board"></div>
+    
+    <section id="addendum">
+        <h2>Addendum</h2>
+        <p><strong>Process and Creative Choices:</strong></p>
+        <p>Started by defining the HTML and CSS structure to visualize the game board. Focused on implementing the game logic in JavaScript, ensuring each click toggles the correct cells. Ensured the game is solvable by starting from an all-off board and randomly simulating clicks. This approach guarantees that the game remains challenging yet solvable, providing a new experience each time the page is refreshed. Added the footer script as instructed to meet the assignment requirements and ensure the last modification date is displayed correctly.</p>
+        
+        <p><strong>Challenges and Solutions:</strong></p>
+        <p>Ensuring the board is always solvable required careful consideration. The hint to simulate clicks on an all-off board was crucial in developing a robust solution. Handling the toggle logic without breaking the grid layout was a key focus, solved by calculating cell indices accurately and ensuring that edge cases (like cells on the border of the grid) were handled properly. Fixed the win checking method by properly checking if all the cells are true, ensuring the game recognizes a win state accurately. This involved a thorough review of the cell states after each move to verify that all cells were turned off, thus indicating a win. The process also included refining the user interface to make the game visually appealing and responsive.</p>
+    </section>
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
